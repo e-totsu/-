@@ -1,0 +1,173 @@
+/*
+    /////////////////
+   //// Totsuii ////
+  /////////////////
+*/
+@use './Totsuii/totsuii.scss' as tuii;
+
+
+
+
+/*
+    //////////////////////
+   //// Goohle Fonts ////
+  //////////////////////
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;300;400;500&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+
+
+/*
+    //////////////////////
+   //// Google Icons ////
+  //////////////////////
+*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+
+
+/*
+    ///////////////
+   //// theme ////
+  ///////////////
+*/
+@import './themes/theme.scss';
+
+
+/*
+    //////////////
+   //// main ////
+  //////////////
+*/
+* {
+  font-size  : 16px;
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-weight: normal;
+  font-style : normal;
+
+  letter-spacing: .04rem;
+  
+  color: var( --theme-text ) !important;
+}
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, .theme-title {
+  font-family: 'Raleway', sans-serif, Arial;
+}
+
+h2 { font-size: 14px; }
+h3 { font-size: 13px; }
+h4 { font-size: 12px; }
+h5 { font-size: 10px; }
+h6 { font-size: 32px; }
+
+#app {
+  background: var( --theme-background ) !important;
+}
+
+
+
+
+/*
+    ///////////////
+   //// glass ////
+  ///////////////
+*/
+.glass {
+  @include tuii.eff-glassmorphism();
+
+  &-0 {
+    @extend .glass;
+    
+    border-width: 0;
+  }
+
+  &-r {
+    @extend .glass;
+    
+    border-left  : 0;
+    border-top   : 0;
+    border-bottom: 0;
+  }
+}
+
+
+
+
+/*
+    ///////////////////////
+   //// border radius ////
+  ///////////////////////
+*/
+.main-rounded {
+  border-radius: .75rem;
+
+  &-t {
+    @extend .main-rounded;
+    
+    border-top-left-radius : 0;
+    border-top-right-radius: 0;
+  }
+
+  &-x {
+    @extend .main-rounded;
+
+    border-radius: 1rem;
+  }
+
+  &-xl {
+    @extend .main-rounded;
+
+    border-radius: 2rem;
+
+    &-r {
+      @extend .main-rounded-xl;
+      border-top-left-radius   : 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+
+
+
+/*
+    //////////////
+   //// menu ////
+  //////////////
+*/
+.main-menu {
+  background-color: transparent !important;
+}
+
+
+
+
+/*
+    //////////////////
+   //// bp_sm -> ////
+  //////////////////
+*/
+.bp_sm .v-content,
+.bp_md .v-content,
+.bp_lg .v-content,
+.bp_xl .v-content {
+  margin-top: 20px;
+}
+
+
+
+
+
+/*
+    //////////////////
+   //// bp_lg -> ////
+  //////////////////
+*/
+.bp_lg .v-content,
+.bp_xl .v-content {
+  margin-top: 30px;
+}

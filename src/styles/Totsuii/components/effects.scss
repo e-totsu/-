@@ -1,0 +1,16 @@
+/*
+    ///////////////////////
+   //// glassmorphism ////
+  ///////////////////////
+*/
+@mixin glassmorphism {
+  border: 1px solid rgba( 255, 255, 255, .1 );
+  
+  background      : rgba( 33, 33, 33, .17 ) !important;
+  background-image: linear-gradient( to top right,
+    rgba( 33, 33, 33, .8 ),
+    transparent
+  ) !important;
+  
+  backdrop-filter: blur( .2rem );
+}

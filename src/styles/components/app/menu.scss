@@ -1,0 +1,20 @@
+.main-menu-icon {
+  width : 4rem;
+  height: 4rem;
+
+  border-radius: 1.5rem;
+  
+  background-image: linear-gradient(to top right, #58D952, #52D99A);
+
+  color: var( --theme-text-1 ) !important;
+  font-size: 2.4rem !important;
+}
+
+.main-menu-title {
+  font-size  : 1.2rem !important;
+  font-family: 'Raleway', sans-serif, Arial;
+
+  opacity: .5;
+}
+
+.main-menu-active { opacity: .5; }

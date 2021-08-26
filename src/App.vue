@@ -3,7 +3,7 @@
     class="theme-dark"
     :class="responsivity"
   >
-    <main-bar @open_menu="menu" ></main-bar>
+    <main-bar @open_menu="menu"></main-bar>
 
     <v-navigation-drawer
       class="main-rounded-xl-r glass-r"
@@ -14,7 +14,7 @@
       overlay-color="black"
       overlay-opacity="0.5"
     >
-      <main-menu ref="mainMenu"></main-menu>
+      <main-menu ref="mainMenu" @menu_close="is_menu = false"></main-menu>
     </v-navigation-drawer>
 
     <v-main>
