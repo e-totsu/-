@@ -1,0 +1,22 @@
+@forward  './components/effects.scss' as eff-*;
+
+:root {
+  --tuii-app-margin-x  : 24px;
+  --tuii-app-margin-l-x: 36px;
+}
+
+@mixin app-content {
+  padding-left : 1.625vw;
+  padding-right: 1.625vw;
+}
+
+@mixin app-bar {
+  @include app-content();
+}
+
+@mixin app-profile-icon {
+  border                   : 1px solid var( --theme-secondary ) !important;
+  border-bottom-left-radius: .3rem !important;
+
+  box-shadow: 6px 6px 15px rgba( #000, .5 );
+}

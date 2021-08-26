@@ -1,0 +1,33 @@
+@import './light.scss';
+@import './dark.scss';
+
+$themes: (
+  light: $light,
+  dark : $dark
+);
+
+@mixin theme( $themes ) {
+  @each $theme-name, $theme-option in $themes {
+    .theme-#{ $theme-name } {
+      @each $option, $value in $theme-option {
+        --theme-#{ $option }: #{ $value };
+      }
+    }
+
+    @each $option, $value in $theme-option {
+      .theme-#{ $option } {
+        color: #{ $value } !important;
+      }
+    }
+  }
+}
+
+body {
+  @include theme( $themes );
+
+  .theme-body   { font-size: 1rem    !important; }
+  .theme-body-1 { font-size: 1.2rem  !important; }
+  .theme-body-2 { font-size: 1.25rem !important; }
+
+  .theme-opacity-38 { opacity: .38 !important; }
+}

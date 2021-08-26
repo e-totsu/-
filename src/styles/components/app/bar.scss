@@ -1,0 +1,88 @@
+/*
+    /////////////////
+   //// Totsuii ////
+  /////////////////
+*/
+@use './../../Totsuii/totsuii.scss' as tuii;
+
+
+
+
+.v-app-bar {
+  @include tuii.app-bar;
+
+  padding-top: 4.3vw;
+
+  margin: 0 auto;
+
+  background: transparent !important;
+
+  .theme-search {
+    max-height: 2rem;
+    
+    border       : 1px solid var( --theme-secondary ) !important;
+    border-radius: 12px !important;
+  
+    background: var( --theme-background-1 ) !important;
+  
+    opacity: .37;
+  
+    transition: opacity .1s ease-in-out;
+  
+    &:hover  { opacity: .5; }
+  
+    label { font-size: .875rem !important; }
+  
+    * { background: transparent !important; }
+  }
+
+  .v-image {
+    @include tuii.app-profile-icon;
+  }
+}
+    
+.v-autocomplete__content .v-list {
+  width: 100%;
+  
+  background: var( --theme-background-1 ) !important;
+
+  border-radius: .75rem;
+}
+
+
+
+
+
+/*
+    //////////////////
+   //// bp_sm -> ////
+  //////////////////
+*/
+.bp_sm .v-app-bar,
+.bp_md .v-app-bar,
+.bp_lg .v-app-bar,
+.bp_xl .v-app-bar {
+  max-width: 80vw;
+  
+  padding-top: 3.6vw;
+
+  .v-autocomplete { max-width: 500px; }
+}
+
+
+
+
+
+/*
+    //////////////////
+   //// bp_lg -> ////
+  //////////////////
+*/
+.bp_lg .v-app-bar,
+.bp_xl .v-app-bar {
+  max-width: 1359px;
+
+  padding-top: 3vw;
+    
+  .v-autocomplete { max-width: 536px; }
+}
