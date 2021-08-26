@@ -1,6 +1,6 @@
 # hodoki
 
-hi everyone,
+Hi everyone,
 Hodoki is an app where you can share everything with every one on the world. And it is all for free in basic partner program!
 
 You want more? You want to be first for us? It is a no problem!
